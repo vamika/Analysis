@@ -1,4 +1,4 @@
-x=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\Hackathon\\Book1.csv")
+x=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\Book1.csv")
 View(x)
 max(x$Literacy.Rate)
 min(x$Literacy.Rate)
@@ -32,7 +32,7 @@ min(x$Tenth.Plan.Sarva.Siksha.Abhiyan.Expenditure...Per.capita.6.14.age)
 filter(x,Tenth.Plan.Sarva.Siksha.Abhiyan.Expenditure...Per.capita.6.14.age==53)#lakshwadeep
 ############################################################################################################
 ####GER####
-y=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\Hackathon\\GERclasswise.csv")
+y=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\GERclasswise.csv")
 View(y)
 y$All.Categories...Classes.I.V.6.10.Years....Girls
 y$All.Categories...Classes.VI.VIII.11.13.Years....Girls
@@ -58,7 +58,7 @@ filter(y,All.Categories...Classes.VI.VIII.11.13.Years....Boys==60.2)#Nagaland mi
 filter(y,All.Categories...Classes.VI.VIII.11.13.Years....Girls==62.4)#Nagaland min girls
 filter(y,All.Categories...Classes.VI.VIII.11.13.Years....Girls==117.6)#Lakshdweep max girls
 ############################################LITERACY REALTED TO PUPIL TEACHER RATIO################################################
-y1=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\Hackathon\\Book1.csv")
+y1=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\Book1.csv")
 View(y1)
 outs=lm(Literacy.Rate~Drop.out.Classes..I.X.,data=y1)
 summary(outs)
@@ -75,7 +75,7 @@ summary(outs4)
 outs5=lm(Literacy.Rate~Availability.Within.School.Premises...Usable.Urinal,data=y1)
 summary(outs5)
 ####################################DROPOUTS NOT RELATED TO ANY FACTOR################################################################
-y1=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\Hackathon\\Book1.csv")
+y1=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\Book1.csv")
 View(y1)
 outs11=lm(Drop.out.Classes..I.X.~Literacy.Rate,data=y1)
 summary(outs11)
@@ -92,13 +92,22 @@ summary(outs46)
 outs57=lm(Drop.out.Classes..I.X.~Availability.Within.School.Premises...Usable.Urinal,data=y1)
 summary(outs57)
 #########################################NOT RELATED#######################################################
-y12=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\datafile-3.csv")
+y12=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\datafile-3.csv")
 View(y12)
 outs123<-lm(Increase.in.Attendance...age.of.Sample.School.~Other.Contributing.Factors.for.Increase.in.Attendance,data=y12)
 summary(outs123)
 ########################################RELATED#########################################################
-y=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\Hackathon\\LiteracyRate in r and sc.csv")
+y=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\LiteracyRate in r and sc.csv")
 View(y)
 sx=lm(Male~Female,data=y)
 summary(sx)
-###############################################################################################
+#######################################################################################################
+h5=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\hack\\Dropreason.csv")
+View(h5)
+h5$ï..Reasons
+h5$Boys
+h5$Girls
+max(h5$Boys)
+min(h5$Girls)
+filter(h5,Boys==37.2)#kerela
+filter(h5,Girls==0.3)
