@@ -91,10 +91,14 @@ outs46=lm(Drop.out.Classes..I.X.~Availability.Within.School.Premises...Playgroun
 summary(outs46)
 outs57=lm(Drop.out.Classes..I.X.~Availability.Within.School.Premises...Usable.Urinal,data=y1)
 summary(outs57)
-################################################################################################
+#########################################NOT RELATED#######################################################
 y12=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\datafile-3.csv")
 View(y12)
-y12$Increase.in.Attendance...age.of.Sample.School.
-y12$Other.Contributing.Factors.for.Increase.in.Attendance
-outs<-lm(Increase.in.Attendance...age.of.Sample.School.~Other.Contributing.Factors.for.Increase.in.Attendance,data=y12)
-summary(outs)
+outs123<-lm(Increase.in.Attendance...age.of.Sample.School.~Other.Contributing.Factors.for.Increase.in.Attendance,data=y12)
+summary(outs123)
+########################################RELATED#########################################################
+y=read.csv("C:\\Users\\Vamika Razdan\\Downloads\\Hackathon\\LiteracyRate in r and sc.csv")
+View(y)
+sx=lm(Male~Female,data=y)
+summary(sx)
+###############################################################################################
